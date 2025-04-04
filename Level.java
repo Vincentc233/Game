@@ -4,20 +4,19 @@ public class Level
     private int points;
     private int sum;
 
-    public Level(boolean g, int p){
-        goal = g;
-        points = p;
-    }
-    /** Returns true if the player reached the goal on this level and returns false otherwise */
     public boolean goalReached()
     {
         return goal;
     }
-    /** Returns the number of points (a positive integer) recorded for this level */
+    public void reachGoal(){
+        goal =true;
+    }
     public int getPoints()
     {
-        if(goal) sum+= points;
-        return sum;
+        return points;
+    }
+    public void setPoints(int p){
+        points = p;
     }
 
 // There may be instance variables, constructors, and methods that are not shown.
