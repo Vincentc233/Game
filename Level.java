@@ -2,7 +2,6 @@ public class Level
 {
     private boolean goal;
     private int points;
-    private int sum;
 
     public boolean goalReached()
     {
@@ -19,5 +18,4 @@ public class Level
         points = p;
     }
 
-// There may be instance variables, constructors, and methods that are not shown.
 }
