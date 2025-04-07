@@ -7,16 +7,13 @@ public class Game
     private Level levelTwo = new Level();
     private Level levelThree = new Level();
 
-    /** Postcondition: All instance variables have been initialized. */
-    public Game(boolean b)
-    {
-        bonus = b;
-    }
     public boolean isBonus()
     {
         return bonus;
     }
-
+    public void makeBonus(){
+        bonus = true;
+    }
     public void play()
     {
       System.out.println("Enter the number of points.");
@@ -43,15 +40,17 @@ public class Game
         if(i==3) return levelThree;
         return null;
     }
-}
+
     public int playManyTimes(int num) {
         int max =0;
         while(num > 0){
             play();
-            int score = getScore();
+            int score = levelOne.getPoints();
             if(score > max) max = score;
+            num--;
         }
-        num--;
         return max;
 
     }
+}
+
